@@ -1,0 +1,91 @@
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+  
+  <link rel="stylesheet" href="style.css">
+</head>  
+ <body>  
+      <h1><marquee bgcolor="#077b8a">Registration Form For Mahakaleshwar Darhan Ujjain</marquee> </h1>
+	  
+    <form method="POST" action="paymentmode.html">  
+	<fieldset>
+	<legend>Basic Details of person </legend>
+	<fieldset>
+	 <legend>Personal information</legend> 
+	 
+        <label>First Name</label> 
+        <input type="text" name="name" required>
+         <label>Last Name</label>  
+         <input type="Last" name="Last"required>  <br> <br>
+         <label>Father Name</label>  
+         <input type="Father" name="Father"required> 
+         <label>Email id</label>  
+         <input type="email" name="email"required> <br> <br>
+		 <label for="Proof">ID Proof Details:</label>
+         <select name="proof" id="proof" >
+         <option value="Adhar" name="Adhar">Adhar Card</option>
+         <option value="Voter" name="voter">Voter ID</option>
+         <option value="Bank" name="bank">Bank Pass Book</option>
+         <option value="Pan Card" name="pan card">Pan Card</option>
+  </select>
+		  <label>Id Proof No</label> 
+        <input type="text" name="proof" required> <br>
+		 
+         <br><label>Enter your gender</label> 
+         <input type="radio" id="gender" name="gender" value="male"required/>Male   
+         <input type="radio" id="gender" name="gender" value="female"required/>Female    
+         <input type="radio" id="gender" name="gender" value="others"required/>others <br/>   
+          
+         
+     </fieldset>
+	 <legend>Contact Details</legend> 
+     <fieldset>	 
+         <br>Address 1:  
+			<input type="text" name="address"><br> <br> <br>
+		 
+		<label>City</label> 
+        <input type="text" name="City:-"required>
+		
+		<label>State</label> 
+        <input type="text" name="State:-"required>
+		
+        <label>Country</label> 
+        <input type="text" name="Country:-"required> <br> <br>
+
+		<label>Zip/Pin Code</label> 
+        <input type="text" name="Code"required>
+		
+		<label>Mobile No</label> 
+        <input type="text" name="Mobile"required>
+	 </fieldset>
+	 
+        <legend>No Of Tickets</legend> 
+         <fieldset>
+	 
+	   <label>Darhan Date</label> 
+        <input type="text" name="Darshan:-"required>
+		
+		 <label for="ticket">No Of Tickets:</label>
+         <select name="Tickets" id=" No of Tickets">
+		  <input type ="text" name="tsize">
+		 </select>
+		 <br> <br>
+		 
+		  <label for="Payment"> (INR 250 Per Ticket) AMOUNT:- INR 250  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   Mode Of Payment:</label>
+         <select name="Payment" id="Mode Of Payment"required>
+		  
+         <option value="Debit" name="debit">Debit Card</option>
+        
+		 </Select>
+		 <br> <br>
+	 
+	
+	     </fieldset>
+		  <br> <br>
+		  <input type="submit" value="Submit">  
+		   <input type="reset" value="Cancel">  
+	 
+  </form>  
+ </body>  
+</html>  

@@ -1,0 +1,70 @@
+<?php
+    include("conection.php");
+    //error_reporting(0);
+    ?>
+	
+<h2> Payment process  </h2>
+<form method="POST" action="thankyou.html">  
+
+
+  <link rel="stylesheet" href="style1.css">
+
+  <div class="Payment ">
+  <label>
+      <span>Card Holder Name</span>
+      <input type="text" size="20" name="name" data-stripe="name"required>
+    </label>
+  
+
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" name="number" data-stripe="number"required>
+    </label>
+  </div>
+<br><br>
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YY)</span>
+      <input type="text" size="2" name="month" data-stripe="exp_month"required>
+    </label>
+	
+    <span> / </span>
+    <input type="text" size="2" name="year" data-stripe="exp_year"required>
+  </div>
+<br><br>
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" name="cvv" data-stripe="cvv"required>
+    </label>
+  </div>
+<br><br>
+           <input type="submit" value="Make a Payment">  
+		   
+		   
+</form>
+
+<?php
+
+    $na=$_POST['name'];
+	$nu=$_POST['number'];
+	$mn=$_POST['month'];
+    $y=$_POST['year'];
+    $cv=$_POST['cvv'];
+	
+
+    $query="INSERT INTO payment VALUES ('$na','$nu','$mn','$y','$cv')";
+    $data=mysqli_query($conn,$query);
+
+    if($data)
+    {
+        echo"Successfully paid";
+    }
+    else
+    {
+        echo "faild to data in databases";
+    }
+
+    ?>
+
+
